@@ -8,10 +8,10 @@ const HEADER_HTML = `<div class="sub-header">
     </a>
 
     <ul class="nav-menu">
-      <li><a href="/pages/about.html" class="nav-link">About Us</a></li>
-      <li><a href="/pages/services.html" class="nav-link">Services</a></li>
-      <li><a href="/pages/malware-care.html" class="nav-link">Malware Care</a></li>
-      <li><a href="/pages/contact.html" class="nav-link">Contact</a></li>
+      <li><a href="/about" class="nav-link">About Us</a></li>
+      <li><a href="/services" class="nav-link">Services</a></li>
+      <li><a href="/malware-care" class="nav-link">Malware Care</a></li>
+      <li><a href="/contact" class="nav-link">Contact</a></li>
       <li><button class="cta-button" onclick="window.location.href='https://noteracker.com/en/pricing/#MonthlyCarePlan'">Get Started</button></li>
     </ul>
 
@@ -42,22 +42,22 @@ const FOOTER_HTML = `<footer class="footer" id="footer">
           <div class="footer-col">
           <h4>Products</h4>
           <ul>
-            <li><a href="/pages/services.html#design">Website Design &amp; Build</a></li>
-            <li><a href="/pages/services.html#rebuild">WP Complete Rebuild</a></li>
-            <li><a href="/pages/services.html#security">WP Performance &amp; Security</a></li>
-            <li><a href="/pages/services.html#monthly-care">Monthly WP Care Plans</a></li>
-            <li><a href="/pages/services.html">Digital file</a></li>
-            <li><a href="/pages/services.html" class="footer-note">Other products besides our monthly subscription management services are currently being prepared for launch.</a></li>
+            <li><a href="/services#design">Website Design &amp; Build</a></li>
+            <li><a href="/services#rebuild">WP Complete Rebuild</a></li>
+            <li><a href="/services#security">WP Performance &amp; Security</a></li>
+            <li><a href="/services#monthly-care">Monthly WP Care Plans</a></li>
+            <li><a href="/services">Digital file</a></li>
+            <li><a href="/services" class="footer-note">Other products besides our monthly subscription management services are currently being prepared for launch.</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Support</h4>
           <ul>
-            <li><a href="/pages/contact.html">Order Process</a></li>
-            <li><a href="/pages/contact.html">Subscription Process</a></li>
-            <li><a href="/pages/contact.html">FAQs</a></li>
-            <li><a href="/pages/contact.html">User Guide</a></li>
+            <li><a href="/contact">Order Process</a></li>
+            <li><a href="/contact">Subscription Process</a></li>
+            <li><a href="/contact">FAQs</a></li>
+            <li><a href="/contact">User Guide</a></li>
           </ul>
         </div>
 
@@ -73,9 +73,9 @@ const FOOTER_HTML = `<footer class="footer" id="footer">
         <div class="footer-col">
           <h4>Company</h4>
           <ul>
-            <li><a href="/pages/about.html">About Us</a></li>
-            <li><a href="/pages/services.html">Service</a></li>
-            <li><a href="/pages/about.html#story">Our story</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services">Service</a></li>
+            <li><a href="/about#story">Our story</a></li>
             <li><a href="https://noteracker.com">Blog</a></li>
           </ul>
         </div>
