@@ -1,7 +1,9 @@
 {
   "name": "n0004",
   "compatibility_date": "2026-02-21",
+  "main": "src/worker.js",
   "assets": {
-    "directory": "./public"
+    "directory": "./public",
+    "binding": "ASSETS"
   }
 }

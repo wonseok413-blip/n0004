@@ -1,31 +1,17 @@
 // Noteracker Ltd. - Main JavaScript
 
 // Initialize everything after DOM is ready
-document.addEventListener('DOMContentLoaded', async function() {
-  await loadComponents();
+document.addEventListener('DOMContentLoaded', function() {
+  loadComponents();
   initFadeInAnimations();
   initSmoothScrolling();
   createMalwareAnimation();
   initCounterAnimation();
 });
 
-// Load shared header and footer components
-async function loadComponents() {
-  const headerEl = document.getElementById('header-one');
-  const footerEl = document.getElementById('footer-one');
-
-  const fetches = [];
-  if (headerEl) fetches.push(fetch('/components/header.html').then(r => r.text()));
-  else fetches.push(null);
-  if (footerEl) fetches.push(fetch('/components/footer.html').then(r => r.text()));
-  else fetches.push(null);
-
-  const [headerHTML, footerHTML] = await Promise.all(fetches);
-
-  if (headerEl && headerHTML) headerEl.outerHTML = headerHTML;
-  if (footerEl && footerHTML) footerEl.outerHTML = footerHTML;
-
-  // Initialize components that depend on header/footer
+// Header and footer are injected server-side by Cloudflare Worker (HTMLRewriter)
+// No client-side fetch needed — just initialize interactive behavior
+function loadComponents() {
   initMobileToggle();
   initHeaderScroll();
   setActiveNav();
