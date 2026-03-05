@@ -174,7 +174,7 @@ a {
   background: var(--accent-primary);
   color: var(--bg-primary);
   padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  border-radius: 22px;
   font-weight: 600;
   transition: all 0.3s ease;
   border: none;
@@ -320,7 +320,7 @@ body.index-page .header.scrolled {
 
 .btn-primary, .btn-secondary {
   padding: 1rem 2rem;
-  border-radius: 8px;
+  border-radius: 22px;
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
