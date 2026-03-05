@@ -256,12 +256,16 @@ a {
 /* Make header transparent on index page */
 body.index-page .header {
   background-color: transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: none;
+  border-bottom: none;
+  box-shadow: none;
 }
 
 body.index-page .header.scrolled {
   background-color: rgba(27, 32, 38, 0.95);
   backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .hero-container {
