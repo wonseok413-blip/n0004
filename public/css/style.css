@@ -320,8 +320,9 @@ body.index-page .header.scrolled {
 
 .hero-buttons .btn-primary,
 .hero-buttons .btn-secondary {
-  width: 200px;
+  width: 240px;
   justify-content: center;
+  white-space: nowrap;
 }
 
 .btn-primary, .btn-secondary {
