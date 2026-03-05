@@ -318,13 +318,6 @@ body.index-page .header.scrolled {
   flex-wrap: wrap;
 }
 
-.hero-buttons .btn-primary,
-.hero-buttons .btn-secondary {
-  min-width: 220px;
-  justify-content: center;
-  border-radius: 26px;
-}
-
 .btn-primary, .btn-secondary {
   padding: 1rem 2rem;
   border-radius: 22px;
