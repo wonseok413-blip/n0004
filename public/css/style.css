@@ -320,11 +320,11 @@ body.index-page .header.scrolled {
 
 .btn-primary, .btn-secondary {
   padding: 1rem 2rem;
-  border-radius: 22px;
+  border-radius: 26px;
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
-  border: none;
+  border: 2px solid transparent;
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
