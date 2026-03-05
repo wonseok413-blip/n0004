@@ -1,0 +1,12 @@
+{
+  "name": "n0004",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "npx wrangler deploy",
+    "dev": "npx wrangler dev"
+  },
+  "dependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
