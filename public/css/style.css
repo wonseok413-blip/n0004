@@ -608,6 +608,20 @@ a {
   border-top: 1px solid rgba(255,255,255,.04);
 }
 
+/* Shared Layout Classes (used across multiple pages) */
+.featured-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.process-step {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {
@@ -729,18 +743,6 @@ a {
   .process-step {
     flex-direction: column !important;
     gap: 1rem !important;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr !important;
-  }
-
-  .pricing-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .feature-grid {
-    grid-template-columns: 1fr !important;
   }
 
   .stats-grid {

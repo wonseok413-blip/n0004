@@ -8,9 +8,10 @@ const HEADER_HTML = `<div class="sub-header">
     </a>
 
     <ul class="nav-menu">
-      <li><a href="/about" class="nav-link">About Us</a></li>
       <li><a href="/services" class="nav-link">Services</a></li>
-      <li><a href="/malware-care" class="nav-link">Malware Care</a></li>
+      <li><a href="/malware-care" class="nav-link">Solution</a></li>
+      <li><a href="/product" class="nav-link">Product</a></li>
+      <li><a href="/blog" class="nav-link">Blog</a></li>
       <li><a href="/contact" class="nav-link">Contact</a></li>
     </ul>
 
