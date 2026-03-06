@@ -113,6 +113,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .logo {
@@ -141,6 +142,15 @@ a {
   list-style: none;
   gap: 2.5rem;
   align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-cta {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 .nav-link {
@@ -669,6 +679,11 @@ a {
     transition: left 0.3s ease;
     gap: 1.5rem;
     align-items: flex-start;
+    transform: none;
+  }
+
+  .nav-cta {
+    display: none;
   }
 
   .nav-menu.active {
