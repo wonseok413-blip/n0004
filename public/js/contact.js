@@ -1,4 +1,24 @@
-// Contact Form — Formspree submission with mailto fallback
+// FAQ Accordion
+document.querySelectorAll('.faq-question').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    const item = this.parentElement;
+    const isActive = item.classList.contains('active');
+
+    // Close all items
+    document.querySelectorAll('.faq-item').forEach(function(el) {
+      el.classList.remove('active');
+      el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+    });
+
+    // Open clicked item if it was closed
+    if (!isActive) {
+      item.classList.add('active');
+      this.setAttribute('aria-expanded', 'true');
+    }
+  });
+});
+
+// Contact Form  Formspree submission with mailto fallback
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
   e.preventDefault();
 

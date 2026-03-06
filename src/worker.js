@@ -37,7 +37,7 @@ const FOOTER_HTML = `<footer class="footer" id="footer">
           <p>We cherish the value of genuine communication as we continue shaping our digital world. And if you ever wish to know more about Noteracker..</p>
           <div class="footer-email-label">Channel of communication</div>
           <div class="footer-email">
-            <i class="fa-solid fa-envelope"></i>
+            <img src="/images/icons/2168904.png" alt="Email" style="width:16px;height:16px;vertical-align:middle;">
             <a href="mailto:support@noteracker.com">support@noteracker.com</a>
           </div>
         </div>
@@ -106,6 +106,9 @@ const FOOTER_HTML = `<footer class="footer" id="footer">
       </div>
       <div class="footer-trademark">
         The WordPress&reg; and WooCommerce&reg; trademarks belong to the WordPress Foundation and WooCommerce, Inc. Reference to these trademarks, along with Breakdance Builder, WP Rocket, Wordfence, Perfmatters, Rank Math, and Object Cache Pro, is strictly for identification purposes. Noteracker is an independent agency specializing in website optimization and management. These professional software tools are utilized solely to provide premium performance and security as part of our management services; they are not for individual resale. Noteracker is not endorsed by, affiliated with, or owned by the owners of these respective trademarks.
+      </div>
+      <div class="footer-trademark" style="padding-top: 0; border-top: none; font-size: 10px;">
+        Icons made by various authors from <a href="https://www.flaticon.com" title="Flaticon" style="color: #4a5260;" target="_blank" rel="noopener">www.flaticon.com</a>
       </div>
     </div>
   </footer>`;

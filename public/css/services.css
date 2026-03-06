@@ -1,15 +1,13 @@
-/* Services Page — Page-specific Styles */
+/* Services Page  Page-specific Styles */
 
 /* Pricing grid (3 plan cards) */
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
-/* Process steps (boxed, standalone — not inside .card) */
+/* Process steps (boxed, standalone  not inside .card) */
 .process-step {
   gap: 1.5rem;
   padding: 1.5rem;
@@ -21,7 +19,7 @@
 .process-num {
   font-size: 2rem;
   font-weight: 800;
-  color: var(--accent-primary);
+  color: #C2CBD7;
   min-width: 50px;
   flex-shrink: 0;
 }
