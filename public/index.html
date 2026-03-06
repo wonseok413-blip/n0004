@@ -64,7 +64,7 @@
       { text: 'Security First<br>Enterprise-Grade Protection', dur: 5000 },
       { text: 'Malware Detected<br>Immediate Response Activated', dur: 5000 },
       { text: 'Threat Neutralized<br>Defenses Reinforced', dur: 5000 },
-      { text: 'Cloud Infrastructure<br>Built for Scale', dur: 2500 }
+      { text: '', dur: 2500 }
     ];
     var el = document.getElementById('video-copy');
     if (!el) return;
@@ -73,7 +73,7 @@
       el.style.opacity = '0';
       setTimeout(function() {
         el.innerHTML = copies[idx].text;
-        el.style.opacity = '1';
+        if (copies[idx].text) el.style.opacity = '1';
         var d = copies[idx].dur;
         idx = (idx + 1) % copies.length;
         setTimeout(show, d);
