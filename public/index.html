@@ -63,23 +63,35 @@
       { text: 'Cloud Infrastructure<br>Built for Scale', dur: 2200 },
       { text: 'Security First<br>Enterprise-Grade Protection', dur: 4500 },
       { text: 'Malware Detected<br>Immediate Response Activated', dur: 4300 },
-      { text: 'Threat Neutralized<br>Defenses Reinforced', dur: 4500 },
-      { text: '', dur: 8000 }
+      { text: 'Threat Neutralized<br>Defenses Reinforced', dur: 4500 }
     ];
+    var TOTAL = 20800;
     var el = document.getElementById('video-copy');
     if (!el) return;
-    var idx = 0;
-    function show() {
-      el.style.opacity = '0';
-      setTimeout(function() {
-        el.innerHTML = copies[idx].text;
-        if (copies[idx].text) el.style.opacity = '1';
-        var d = copies[idx].dur;
-        idx = (idx + 1) % copies.length;
-        setTimeout(show, d);
-      }, 400);
+    function cycle() {
+      var elapsed = 0;
+      var idx = 0;
+      function showNext() {
+        if (idx < copies.length) {
+          el.style.opacity = '0';
+          setTimeout(function() {
+            el.innerHTML = copies[idx].text;
+            el.style.opacity = '1';
+            var d = copies[idx].dur;
+            elapsed += d + 400;
+            idx++;
+            setTimeout(showNext, d);
+          }, 400);
+        } else {
+          el.style.opacity = '0';
+          var remaining = TOTAL - elapsed;
+          if (remaining < 0) remaining = 0;
+          setTimeout(cycle, remaining);
+        }
+      }
+      showNext();
     }
-    show();
+    cycle();
   })();
   </script>
 
