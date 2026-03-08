@@ -160,6 +160,7 @@ a {
   display: flex;
   align-items: center;
   margin-left: auto;
+  gap: 0.75rem;
 }
 
 .nav-link {
@@ -194,17 +195,17 @@ a {
 
 .cta-login {
   background: transparent;
-  color: #e6b802;
+  color: #d7d7d7;
   padding: 0.75rem 1.5rem;
   border-radius: 22px;
   font-weight: 600;
   transition: all 0.3s ease;
-  border: 1.5px solid #e6b802;
+  border: 1.5px solid #d7d7d7;
   cursor: pointer;
 }
 
 .cta-login:hover {
-  background: rgba(230, 184, 2, 0.1);
+  background: rgba(215, 215, 215, 0.1);
   transform: translateY(-2px);
 }
 
