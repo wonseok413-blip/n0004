@@ -12,14 +12,50 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="preload" href="/vid/hero" as="fetch" crossorigin>
+  <link rel="preload" href="/vid/main" as="fetch" crossorigin>
 </head>
 <body class="index-page">
+  <svg width="0" height="0" style="position:absolute;overflow:hidden;">
+    <defs>
+      <filter id="bf1" x="-15%" y="-15%" width="130%" height="130%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.02 0.12" numOctaves="4" seed="2" result="edge"/>
+        <feDisplacementMap in="SourceGraphic" in2="edge" scale="12" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+        <feTurbulence type="fractalNoise" baseFrequency="0.025 0.12" numOctaves="2" seed="5" result="bristle"/>
+        <feColorMatrix in="bristle" type="luminanceToAlpha" result="bAlpha"/>
+        <feComponentTransfer in="bAlpha" result="bMask">
+          <feFuncA type="linear" slope="4" intercept="-0.8"/>
+        </feComponentTransfer>
+        <feComposite in="rough" in2="bMask" operator="in"/>
+      </filter>
+      <filter id="bf2" x="-15%" y="-15%" width="130%" height="130%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.025 0.10" numOctaves="4" seed="15" result="edge"/>
+        <feDisplacementMap in="SourceGraphic" in2="edge" scale="14" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+        <feTurbulence type="fractalNoise" baseFrequency="0.03 0.10" numOctaves="2" seed="20" result="bristle"/>
+        <feColorMatrix in="bristle" type="luminanceToAlpha" result="bAlpha"/>
+        <feComponentTransfer in="bAlpha" result="bMask">
+          <feFuncA type="linear" slope="4" intercept="-0.8"/>
+        </feComponentTransfer>
+        <feComposite in="rough" in2="bMask" operator="in"/>
+      </filter>
+      <filter id="bf3" x="-15%" y="-15%" width="130%" height="130%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.018 0.11" numOctaves="4" seed="88" result="edge"/>
+        <feDisplacementMap in="SourceGraphic" in2="edge" scale="10" xChannelSelector="R" yChannelSelector="G" result="rough"/>
+        <feTurbulence type="fractalNoise" baseFrequency="0.02 0.14" numOctaves="2" seed="42" result="bristle"/>
+        <feColorMatrix in="bristle" type="luminanceToAlpha" result="bAlpha"/>
+        <feComponentTransfer in="bAlpha" result="bMask">
+          <feFuncA type="linear" slope="4" intercept="-0.8"/>
+        </feComponentTransfer>
+        <feComposite in="rough" in2="bMask" operator="in"/>
+      </filter>
+    </defs>
+  </svg>
   <div id="header-one"></div>
 
   <!-- Hero Section with Video Background -->
   <section class="hero hero-video" style="min-height: 600px; height: 600px;">
-    <video autoplay muted loop playsinline class="hero-bg-video">
-      <source src="https://pub-c549a01ee99b46c388128ba4507e19fc.r2.dev/about02-1.webm" type="video/webm">
+    <video autoplay muted loop playsinline preload="auto" class="hero-bg-video">
+      <source src="/vid/hero" type="video/webm">
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-container" style="grid-template-columns: 1fr;">
@@ -27,7 +63,7 @@
         <span class="hero-badge">Emergency Malware Response Available 24/7</span>
         <h1>
           Shields Braced.<br>
-          <span class="hero-highlight" style="color: #fff !important; -webkit-text-fill-color: #fff !important;">Malware-Free</span> Data Flow.
+          <span class="hero-highlight" style="color: #fff !important; -webkit-text-fill-color: #fff !important; position: relative; display: inline-block; z-index: 1;"><span class="brush-bg brush-bg--1"></span><span class="brush-bg brush-bg--2"></span><span class="brush-bg brush-bg--3"></span>Malware-Free</span> Data Flow.
         </h1>
         <p style="margin: 0 auto;">
           Enterprise security meets performance engineering. Your site stays clean, fast, and protected.
@@ -47,53 +83,16 @@
   <!-- Video Section -->
   <section style="padding: 4rem 0; background: var(--bg-primary); margin-top: -50px;">
     <div class="container" style="display: flex; justify-content: center;">
-      <div style="position: relative; width: 1300px; max-width: 100%;">
-        <video autoplay muted loop playsinline style="width: 100%; border-radius: 22px; border: 40px solid #9E9E9E; filter: brightness(0.6); display: block;">
-          <source src="https://pub-80bc06c5c15341ab8e756188c7683187.r2.dev/Clip/maleware2.mp4" type="video/mp4">
+      <div style="position: relative; width: 1300px; max-width: 100%; background: #1a1a1a; border-radius: 22px; border: 40px solid #9E9E9E;">
+        <video autoplay muted loop playsinline preload="auto" style="width: 100%; border-radius: 0; filter: brightness(0.6); display: block;">
+          <source src="/vid/main" type="video/mp4">
         </video>
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; padding: 40px;">
-          <div id="video-copy" style="color: #fff; font-family: 'Noto Sans', sans-serif; font-size: 2.2rem; font-weight: 700; text-align: center; text-shadow: 0 2px 8px rgba(0,0,0,0.6); transition: opacity 0.5s ease; line-height: 1.4;"></div>
+          <div style="color: #fff; font-family: 'Noto Sans', sans-serif; font-size: 2.2rem; font-weight: 700; text-align: center; text-shadow: 0 2px 8px rgba(0,0,0,0.6); line-height: 1.4;">Detect. Remove. Harden.<br>Complete Malware Care by Noteracker.</div>
         </div>
       </div>
     </div>
   </section>
-  <script>
-  (function() {
-    var copies = [
-      { text: 'Cloud Infrastructure<br>Built for Scale', dur: 2200 },
-      { text: 'Security First<br>Enterprise-Grade Protection', dur: 4500 },
-      { text: 'Malware Detected<br>Immediate Response Activated', dur: 4300 },
-      { text: 'Threat Neutralized<br>Defenses Reinforced', dur: 4500 }
-    ];
-    var TOTAL = 20800;
-    var el = document.getElementById('video-copy');
-    if (!el) return;
-    function cycle() {
-      var elapsed = 0;
-      var idx = 0;
-      function showNext() {
-        if (idx < copies.length) {
-          el.style.opacity = '0';
-          setTimeout(function() {
-            el.innerHTML = copies[idx].text;
-            el.style.opacity = '1';
-            var d = copies[idx].dur;
-            elapsed += d + 400;
-            idx++;
-            setTimeout(showNext, d);
-          }, 400);
-        } else {
-          el.style.opacity = '0';
-          var remaining = TOTAL - elapsed;
-          if (remaining < 0) remaining = 0;
-          setTimeout(cycle, remaining);
-        }
-      }
-      showNext();
-    }
-    cycle();
-  })();
-  </script>
 
   <!-- Trust Bar -->
   <section class="trust-bar">
