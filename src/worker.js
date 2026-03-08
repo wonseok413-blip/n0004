@@ -27,7 +27,7 @@ const HEADER_HTML = `<div class="sub-header">
 
     <ul class="nav-menu">
       <li><a href="/services" class="nav-link">Services</a></li>
-      <li><a href="/malware-care" class="nav-link">Solution</a></li>
+      <li><a href="/solution" class="nav-link">Solution</a></li>
       <li><a href="/product" class="nav-link">Product</a></li>
       <li><a href="/blog" class="nav-link">Blog</a></li>
       <li><a href="/contact" class="nav-link">Contact</a></li>
@@ -97,7 +97,7 @@ const FOOTER_HTML = `<footer class="footer" id="footer">
           <ul>
             <li><a href="/about">About Us</a></li>
             <li><a href="/services">Service</a></li>
-            <li><a href="https://noteracker.com/shop" target="_blank" rel="noopener">Shop</a></li>
+            <li><a href="#" onclick="externalRedirect('https://noteracker.com/shop','noteracker.com');return false;">Shop</a></li>
             <li><a href="/about#story">Our story</a></li>
             <li><a href="https://noteracker.com">Blog</a></li>
           </ul>

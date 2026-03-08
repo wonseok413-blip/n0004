@@ -620,3 +620,13 @@ function createMalwareAnimation() {
   `;
   document.head.appendChild(style);
 }
+
+// External redirect with transition overlay
+function externalRedirect(url, siteName) {
+  const overlay = document.createElement('div');
+  overlay.style.cssText = 'position:fixed;inset:0;z-index:99999;background:rgba(28,34,40,0.92);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.25s ease';
+  overlay.innerHTML = '<div style="text-align:center;color:#fff;font-family:Noto Sans,sans-serif"><div style="font-size:14px;color:#C2CBD7;margin-bottom:8px">' + siteName + '</div><div style="font-size:18px;font-weight:600">Redirecting...</div></div>';
+  document.body.appendChild(overlay);
+  requestAnimationFrame(() => { overlay.style.opacity = '1'; });
+  setTimeout(() => { window.open(url, '_blank'); overlay.style.opacity = '0'; setTimeout(() => overlay.remove(), 300); }, 1000);
+}
