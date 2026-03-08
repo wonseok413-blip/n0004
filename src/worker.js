@@ -1,6 +1,5 @@
 // Video proxy routes: browser → Worker → R2 (with Cloudflare edge caching)
 const VIDEO_ROUTES = {
-  '/vid/main': 'https://cdn2.noteracker.com/Clip/maleware2.mp4',
 };
 
 async function handleVideo(request, originUrl) {
