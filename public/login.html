@@ -22,65 +22,56 @@
     }
 
     .login-wrap {
-      width: 100%;
-      max-width: 420px;
-      padding: 0 1.25rem;
+      width: 420px;
+      max-width: 100%;
+      padding: 20px;
     }
 
     .login-card {
       background: #1c2228;
       border-radius: 16px;
-      padding: 2.5rem 2rem;
-      border: 1px solid rgba(255,255,255,0.06);
+      padding: 40px 36px 36px;
+      border: 0.8px solid #323841;
     }
 
     .logo-area {
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 28px;
     }
 
     .logo-area a {
+      display: inline-block;
       text-decoration: none;
     }
 
-    .logo-text {
-      font-size: 28px;
-      font-weight: 800;
-      letter-spacing: 3px;
-      color: #d7d7d7;
-      text-transform: uppercase;
-    }
-
-    .logo-sub {
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 4px;
-      color: #e6b802;
-      text-transform: uppercase;
-      margin-top: -2px;
+    .logo-area img {
+      height: 55px;
+      width: auto;
     }
 
     .login-title {
+      text-align: center;
       font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 0.35rem;
+      font-weight: 800;
+      margin-bottom: 6px;
     }
 
     .login-subtitle {
+      text-align: center;
       font-size: 14px;
-      color: #8a929a;
-      margin-bottom: 1.75rem;
+      color: #9e9e9e;
+      margin-bottom: 28px;
     }
 
     .field {
-      margin-bottom: 1.25rem;
+      margin-bottom: 18px;
     }
 
     .field label {
       display: block;
       font-size: 14px;
       font-weight: 600;
-      margin-bottom: 0.5rem;
+      margin-bottom: 8px;
     }
 
     .input-wrap {
@@ -92,10 +83,10 @@
     .field input[type="text"] {
       width: 100%;
       background: #252b30;
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 0.8px solid #323841;
       border-radius: 10px;
-      padding: 0.8rem 1rem;
-      font-size: 14px;
+      padding: 13px 16px;
+      font-size: 15px;
       color: #fff;
       font-family: inherit;
       outline: none;
@@ -112,15 +103,16 @@
 
     .pw-toggle {
       position: absolute;
-      right: 12px;
+      right: 14px;
       top: 50%;
       transform: translateY(-50%);
       background: none;
       border: none;
       color: #555d65;
       cursor: pointer;
-      font-size: 16px;
       padding: 4px;
+      display: flex;
+      align-items: center;
     }
 
     .pw-toggle:hover {
@@ -131,16 +123,16 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 1.5rem;
-      font-size: 13px;
+      margin-bottom: 22px;
+      font-size: 14px;
     }
 
     .remember-label {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 8px;
       cursor: pointer;
-      color: #8a929a;
+      color: #9e9e9e;
     }
 
     .remember-label input[type="checkbox"] {
@@ -153,6 +145,7 @@
       color: #e6b802;
       text-decoration: none;
       font-weight: 500;
+      font-size: 14px;
     }
 
     .forgot-link:hover {
@@ -165,13 +158,13 @@
       color: #111820;
       border: none;
       border-radius: 22px;
-      padding: 0.9rem;
+      padding: 14px;
       font-size: 16px;
       font-weight: 700;
       font-family: inherit;
       cursor: pointer;
       transition: all 0.2s;
-      margin-bottom: 1.25rem;
+      margin-bottom: 18px;
     }
 
     .btn-signin:hover {
@@ -187,7 +180,7 @@
     .signup-row {
       text-align: center;
       font-size: 14px;
-      color: #8a929a;
+      color: #9e9e9e;
     }
 
     .signup-row a {
@@ -205,9 +198,9 @@
       border: 1px solid rgba(220,53,69,0.3);
       color: #f0a0a8;
       border-radius: 8px;
-      padding: 0.75rem 1rem;
+      padding: 12px 16px;
       font-size: 13px;
-      margin-bottom: 1rem;
+      margin-bottom: 16px;
       display: none;
     }
 
@@ -219,33 +212,33 @@
 
     .panel-2fa .shield-icon {
       font-size: 40px;
-      margin-bottom: 1rem;
+      margin-bottom: 16px;
     }
 
     .panel-2fa h2 {
       font-size: 20px;
       font-weight: 700;
-      margin-bottom: 0.35rem;
+      margin-bottom: 6px;
     }
 
     .panel-2fa p {
       font-size: 13px;
-      color: #8a929a;
-      margin-bottom: 1.5rem;
+      color: #9e9e9e;
+      margin-bottom: 24px;
     }
 
     .otp-row {
       display: flex;
-      gap: 0.5rem;
+      gap: 8px;
       justify-content: center;
-      margin-bottom: 1.5rem;
+      margin-bottom: 24px;
     }
 
     .otp-cell {
       width: 44px;
       height: 52px;
       background: #252b30;
-      border: 1px solid rgba(255,255,255,0.08);
+      border: 0.8px solid #323841;
       border-radius: 10px;
       text-align: center;
       font-size: 20px;
@@ -263,18 +256,17 @@
     .btn-back {
       background: none;
       border: none;
-      color: #8a929a;
+      color: #9e9e9e;
       font-size: 13px;
       cursor: pointer;
       font-family: inherit;
-      margin-top: 0.75rem;
+      margin-top: 12px;
     }
 
     .btn-back:hover {
       color: #fff;
     }
 
-    /* Spinner */
     .spinner {
       display: inline-block;
       width: 18px;
@@ -295,14 +287,13 @@
       text-align: center;
       font-size: 12px;
       color: #4a5260;
-      margin-top: 2rem;
-      padding-bottom: 1.5rem;
+      margin-top: 24px;
+      padding-bottom: 20px;
     }
 
     @media (max-width: 480px) {
-      .login-card {
-        padding: 2rem 1.5rem;
-      }
+      .login-wrap { padding: 16px; }
+      .login-card { padding: 32px 24px 28px; }
     }
   </style>
 </head>
@@ -312,8 +303,7 @@
       <!-- Logo -->
       <div class="logo-area">
         <a href="/index.html">
-          <div class="logo-text">Noteracker</div>
-          <div class="logo-sub">Studio</div>
+          <img src="/images/noteracker-logo-02.webp" alt="Noteracker Ltd.">
         </a>
       </div>
 
@@ -335,7 +325,7 @@
             <div class="input-wrap">
               <input type="password" id="f-pw" placeholder="Enter your password" required autocomplete="current-password">
               <button type="button" class="pw-toggle" onclick="togglePw()">
-                <svg id="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg>
               </button>
             </div>
           </div>
@@ -371,7 +361,7 @@
         </div>
 
         <button type="button" class="btn-signin" id="btn-2fa">Verify Code</button>
-        <button type="button" class="btn-back" onclick="show2FA(false)">← Back to login</button>
+        <button type="button" class="btn-back" onclick="show2FA(false)">&larr; Back to login</button>
       </div>
     </div>
 
@@ -384,27 +374,23 @@
     var API = 'https://noteracker.com/api/auth';
     var loginToken = null;
 
-    // Toggle password visibility
     function togglePw() {
       var pw = document.getElementById('f-pw');
       pw.type = pw.type === 'password' ? 'text' : 'password';
     }
 
-    // Show/hide 2FA panel
     function show2FA(show) {
       document.getElementById('p-login').style.display = show ? 'none' : 'block';
       document.getElementById('p-2fa').style.display = show ? 'block' : 'none';
       if (show) document.querySelector('.otp-cell').focus();
     }
 
-    // Show error
     function showErr(msg) {
       var el = document.getElementById('err-msg');
       el.textContent = msg;
       el.style.display = msg ? 'block' : 'none';
     }
 
-    // Login submit
     document.getElementById('loginForm').addEventListener('submit', async function() {
       var btn = document.getElementById('btn-login');
       var email = document.getElementById('f-email').value.trim();
@@ -441,7 +427,6 @@
       btn.textContent = 'Sign In';
     });
 
-    // OTP cells navigation
     var cells = document.querySelectorAll('.otp-cell');
     cells.forEach(function(cell, i) {
       cell.addEventListener('input', function() {
@@ -453,7 +438,6 @@
       });
     });
 
-    // 2FA verify
     document.getElementById('btn-2fa').addEventListener('click', async function() {
       var code = '';
       cells.forEach(function(c) { code += c.value; });
