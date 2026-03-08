@@ -1,5 +1,17 @@
 /* Index (Home) Page  Page-specific Styles */
 
+/* Hero Lottie Background */
+#hero-lottie svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+}
+
 /* Brush stroke highlight for Malware-Free */
 .brush-bg {
   position: absolute;
