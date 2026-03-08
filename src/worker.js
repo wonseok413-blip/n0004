@@ -34,6 +34,7 @@ const HEADER_HTML = `<div class="sub-header">
     </ul>
 
     <div class="nav-cta">
+      <button class="cta-login" onclick="window.location.href='https://noteracker.com/my-account'">Log In</button>
       <button class="cta-button" onclick="window.location.href='https://noteracker.com/en/pricing/#MonthlyCarePlan'">Get Started</button>
     </div>
 

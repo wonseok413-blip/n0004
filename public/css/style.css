@@ -192,6 +192,22 @@ a {
   color: var(--accent-primary);
 }
 
+.cta-login {
+  background: transparent;
+  color: #e6b802;
+  padding: 0.75rem 1.5rem;
+  border-radius: 22px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1.5px solid #e6b802;
+  cursor: pointer;
+}
+
+.cta-login:hover {
+  background: rgba(230, 184, 2, 0.1);
+  transform: translateY(-2px);
+}
+
 .cta-button {
   background: var(--accent-primary);
   color: var(--bg-primary);
