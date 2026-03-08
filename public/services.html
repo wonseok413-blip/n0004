@@ -16,8 +16,10 @@
   <div id="header-one"></div>
 
   <!-- Page Hero -->
-  <section class="hero" style="min-height: 700px; height: 700px;">
-    <div class="hero-container" style="grid-template-columns: 1fr;">
+  <section class="hero" style="min-height: 700px; height: 700px; overflow:hidden;">
+    <canvas id="svc-hero-grad" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;"></canvas>
+    <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(28,34,40,0.65);z-index:1;"></div>
+    <div class="hero-container" style="grid-template-columns: 1fr; position:relative; z-index:2;">
       <div class="hero-content" style="text-align: center; max-width: 900px; margin: 0 auto;">
         <span class="hero-badge">WP Performance & Security</span>
         <h1>Malware-Free Stable Data Flow<br>via Our Tech</h1>
@@ -328,6 +330,82 @@
   <div id="footer-one"></div>
 
   <script src="js/main.js"></script>
+  <script>
+  (function(){
+    var c=document.getElementById('svc-hero-grad');
+    if(!c)return;
+    var ctx=c.getContext('2d');
+    var W,H;
+    function resize(){W=c.width=c.offsetWidth*2;H=c.height=c.offsetHeight*2;}
+    resize();
+    window.addEventListener('resize',resize);
+
+    var palettes=[
+      ['#ff6b6b','#4ecdc4','#45b7d1','#96ceb4'],
+      ['#a18cd1','#fbc2eb','#f6d365','#fda085'],
+      ['#667eea','#764ba2','#f093fb','#4facfe'],
+      ['#43e97b','#38f9d7','#fa709a','#fee140'],
+      ['#a1c4fd','#c2e9fb','#d4fc79','#96e6a1'],
+      ['#ffecd2','#fcb69f','#a1c4fd','#c2e9fb']
+    ];
+
+    var blobs=[];
+    var blobCount=5;
+
+    function makeBlob(instant){
+      var pal=palettes[Math.floor(Math.random()*palettes.length)];
+      var col=pal[Math.floor(Math.random()*pal.length)];
+      var r=parseInt(col.slice(1,3),16),g=parseInt(col.slice(3,5),16),b=parseInt(col.slice(5,7),16);
+      var blob={
+        x:Math.random()*W,y:Math.random()*H,
+        vx:(Math.random()-0.5)*0.8,vy:(Math.random()-0.5)*0.8,
+        radius:W*0.2+Math.random()*W*0.25,
+        r:r,g:g,b:b,
+        opacity:instant?0.25+Math.random()*0.15:0,
+        targetOpacity:0.25+Math.random()*0.15,
+        fadeIn:true,
+        life:0,
+        maxLife:600+Math.random()*800
+      };
+      return blob;
+    }
+
+    for(var i=0;i<blobCount;i++){blobs.push(makeBlob(true));}
+
+    function draw(){
+      ctx.clearRect(0,0,W,H);
+
+      for(var i=blobs.length-1;i>=0;i--){
+        var b=blobs[i];
+        b.x+=b.vx;b.y+=b.vy;
+        b.life++;
+
+        if(b.x<-b.radius)b.x=W+b.radius;
+        if(b.x>W+b.radius)b.x=-b.radius;
+        if(b.y<-b.radius)b.y=H+b.radius;
+        if(b.y>H+b.radius)b.y=-b.radius;
+
+        if(b.fadeIn){
+          b.opacity+=0.002;
+          if(b.opacity>=b.targetOpacity){b.opacity=b.targetOpacity;b.fadeIn=false;}
+        }
+        if(b.life>b.maxLife){
+          b.opacity-=0.003;
+          if(b.opacity<=0){blobs.splice(i,1);blobs.push(makeBlob(false));continue;}
+        }
+
+        var grad=ctx.createRadialGradient(b.x,b.y,0,b.x,b.y,b.radius);
+        grad.addColorStop(0,'rgba('+b.r+','+b.g+','+b.b+','+b.opacity+')');
+        grad.addColorStop(1,'rgba('+b.r+','+b.g+','+b.b+',0)');
+        ctx.fillStyle=grad;
+        ctx.fillRect(b.x-b.radius,b.y-b.radius,b.radius*2,b.radius*2);
+      }
+
+      requestAnimationFrame(draw);
+    }
+    draw();
+  })();
+  </script>
 </body>
 <!-- cf-cache-bust -->
 </html>
