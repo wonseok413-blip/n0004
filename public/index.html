@@ -12,8 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/index.css">
-  <link rel="preload" href="/vid/hero" as="fetch" crossorigin>
-  <link rel="preload" href="/vid/main" as="fetch" crossorigin>
+  <link rel="preload" href="/vid/main" as="video" type="video/mp4">
 </head>
 <body class="index-page">
   <svg width="0" height="0" style="position:absolute;overflow:hidden;">
@@ -52,12 +51,8 @@
   </svg>
   <div id="header-one"></div>
 
-  <!-- Hero Section with Video Background -->
-  <section class="hero hero-video" style="min-height: 600px; height: 600px;">
-    <video autoplay muted loop playsinline preload="auto" class="hero-bg-video">
-      <source src="/vid/hero" type="video/webm">
-    </video>
-    <div class="hero-overlay"></div>
+  <!-- Hero Section -->
+  <section class="hero" style="min-height: 600px; height: 600px;">
     <div class="hero-container" style="grid-template-columns: 1fr;">
       <div class="hero-content" style="text-align: center; max-width: 900px; margin: 0 auto; padding-top: 90px;">
         <span class="hero-badge">Emergency Malware Response Available 24/7</span>

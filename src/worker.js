@@ -1,6 +1,5 @@
 // Video proxy routes: browser → Worker → R2 (with Cloudflare edge caching)
 const VIDEO_ROUTES = {
-  '/vid/hero': 'https://cdn.noteracker.com/about02-1.webm',
   '/vid/main': 'https://cdn2.noteracker.com/Clip/maleware2.mp4',
 };
 
