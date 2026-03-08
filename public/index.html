@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/index.css">
-  <link rel="preload" href="/vid/main" as="video" type="video/mp4">
+  <link rel="preload" href="https://cdn2.noteracker.com/Clip/maleware2.mp4" as="video" type="video/mp4" crossorigin fetchpriority="high">
 </head>
 <body class="index-page">
   <svg width="0" height="0" style="position:absolute;overflow:hidden;">
@@ -79,8 +79,7 @@
   <section style="padding: 4rem 0; background: var(--bg-primary); margin-top: -50px;">
     <div class="container" style="display: flex; justify-content: center;">
       <div style="position: relative; width: 1300px; max-width: 100%; background: #1a1a1a; border-radius: 22px; border: 40px solid #9E9E9E;">
-        <video autoplay muted loop playsinline preload="auto" style="width: 100%; border-radius: 0; filter: brightness(0.6); display: block;">
-          <source src="/vid/main" type="video/mp4">
+        <video autoplay muted loop playsinline preload="auto" fetchpriority="high" src="https://cdn2.noteracker.com/Clip/maleware2.mp4" style="width: 100%; border-radius: 0; filter: brightness(0.6); display: block;">
         </video>
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; padding: 40px;">
           <div style="color: #fff; font-family: 'Noto Sans', sans-serif; font-size: 2.2rem; font-weight: 700; text-align: center; text-shadow: 0 2px 8px rgba(0,0,0,0.6); line-height: 1.4;">Detect. Remove. Harden.<br>Complete Malware Care by Noteracker.</div>
@@ -402,5 +401,5 @@
 
   <script src="js/main.js"></script>
 </body>
-<!-- cf-cache-bust -->
+<!-- cf-cache-bust-v2 -->
 </html>
